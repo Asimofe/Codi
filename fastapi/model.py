@@ -3,7 +3,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 
 quantization_config = BitsAndBytesConfig(load_in_8bit=True)
 
-checkpoint = "Leecm/finetune_starcoder2"
+checkpoint = "Dang-gu/finetune_starcoder2"
 device = "cuda"
 
 # 모델과 토크나이저 로딩

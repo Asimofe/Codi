@@ -76,14 +76,18 @@ const App = () => {
 
 const MessageList = ({ messages, currentTypingId, onEndTyping }) => (
   <div className="messages-list">
-    {messages && messages.map((message, index) => (
-      <Message
-        key={index}
-        {...message}
-        onEndTyping={onEndTyping}
-        currentTypingId={currentTypingId}
-      />
-    ))}
+    {messages && messages.length > 0 ? (
+      messages.map((message, index) => (
+        <Message
+          key={index}
+          {...message}
+          onEndTyping={onEndTyping}
+          currentTypingId={currentTypingId}
+        />
+      ))
+    ) : (
+      <p>No messages</p>
+    )}
   </div>
 );
 
